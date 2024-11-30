@@ -25,9 +25,12 @@ const authinticated = false;
     </ul>
     <div class="">
       <div class="flex items-center space-x-3" v-if="!authinticated">
-        <RouterLink to="/register" class="p-2  border border-indigo-700 rounded-md  text-sm font-semibold ">Sign Up
+        <RouterLink to="/register"
+          class="p-2  border border-indigo-700 rounded-md transition-all ease-in-out duration-300 hover:bg-indigo-300 hover:text-gray-800  text-sm font-semibold ">
+          Sign Up
         </RouterLink>
-        <RouterLink to="/login" class="p-2 bg-indigo-500 border border-indigo-700 rounded-md  text-sm font-semibold ">
+        <RouterLink to="/login"
+          class="p-2 bg-indigo-500 border border-indigo-700 rounded-md transition-all ease-in-out duration-300  hover:bg-indigo-800 text-sm font-semibold ">
           Sign In</RouterLink>
       </div>
       <div class="pr-3" v-else>

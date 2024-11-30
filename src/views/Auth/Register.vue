@@ -3,7 +3,7 @@
 <template>
   <div class="flex items-center justify-center">
     <div class="px-3 my-2 border-l-4 border-l-indigo-600">
-      <h3 class="text-2xl font-bold">Register a new User</h3>
+      <h3 class="text-3xl font-bold pb-3">Register a new User</h3>
       <div class="my-5">
         <label for="name" class="input-label">UserName</label>
         <input type="text" name="name" class="text-input" placeholder="User Name">

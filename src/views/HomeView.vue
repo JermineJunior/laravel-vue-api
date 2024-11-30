@@ -6,7 +6,7 @@ let data = [1, 2, 3, 4, 5, 6]
 
 <template>
   <div class="flex justify-end">
-    <button class="mr-3 mb-6 p-3 font-bold  bg-indigo-700 rounded-md">
+    <button class="btn-primary">
       Add a Post
     </button>
   </div>

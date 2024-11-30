@@ -14,7 +14,7 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
 </template>
 <style scoped lang="postcss">
 :global(html) {
-    background-color: theme(colors.zinc.950);
-    color: theme(colors.white);
+    background-color: #09090b;
+    color: white;
 }
 </style>

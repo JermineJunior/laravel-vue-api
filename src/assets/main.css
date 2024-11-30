@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .btn-primary{
+     @apply mr-3 mb-6 p-3 font-bold bg-indigo-700 rounded-md transition-all ease-in-out duration-300 hover:bg-indigo-800;
+  }
   .input-label {
     @apply block pb-2 font-medium text-sm text-gray-200;
   }

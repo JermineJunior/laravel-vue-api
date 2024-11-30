@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router';
 <template>
   <div class="flex items-center justify-center">
     <div class="px-3 my-2 border-l-4 border-l-indigo-600">
-      <h3 class="text-2xl font-bold">Login to your account</h3>
+      <h3 class="text-3xl font-bold pb-3">Login to your account</h3>
       <!-- email -->
       <div class="my-5">
         <label for="email" class="input-label">Email Address</label>
