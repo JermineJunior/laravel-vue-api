@@ -1,30 +1,20 @@
-<script setup></script>
+<script setup>
+import { RouterView } from 'vue-router';
+import BaseNavigation from '@/components/BaseNavigation.vue';
+</script>
 <template>
     <div class="container m-6">
-        <section>
-            <header class="">
-                <ul
-                    class="flex items-center justify-center space-x-6 list-none text-sm"
-                >
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </header>
-        </section>
+        <BaseNavigation />
         <main>
             <div class="py-16">
-                <div class="flex">
-                    <p class="text-xl">main Content</p>
-                </div>
+                <RouterView />
             </div>
         </main>
     </div>
 </template>
-
+<style scoped lang="postcss">
+:global(html) {
+    background-color: theme(colors.zinc.950);
+    color: theme(colors.white);
+}
+</style>
