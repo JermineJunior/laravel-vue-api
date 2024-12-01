@@ -1,6 +1,8 @@
 <script setup>
+import { useAuthStore } from '@/stores/auth';
 import { RouterLink } from 'vue-router';
-const authinticated = false;
+
+const authStore = useAuthStore()
 </script>
 
 <template>
@@ -17,14 +19,11 @@ const authinticated = false;
     </div>
     <ul class="flex items-center justify-center space-x-6 list-none ">
       <li>
-        <RouterLink to="/">Home</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/">Posts</RouterLink>
+        <RouterLink class="px-3 py-2 transition-all ease-in-out duration-300 hover:bg-zinc-800 rounded-md" to="/">Home</RouterLink>
       </li>
     </ul>
     <div class="">
-      <div class="flex items-center space-x-3" v-if="!authinticated">
+      <div class="flex items-center space-x-3" v-if="!authStore.user">
         <RouterLink to="/register"
           class="p-2  border border-indigo-700 rounded-md transition-all ease-in-out duration-300 hover:bg-indigo-300 hover:text-gray-800  text-sm font-semibold ">
           Sign Up
@@ -33,8 +32,11 @@ const authinticated = false;
           class="p-2 bg-indigo-500 border border-indigo-700 rounded-md transition-all ease-in-out duration-300  hover:bg-indigo-800 text-sm font-semibold ">
           Sign In</RouterLink>
       </div>
-      <div class="pr-3" v-else>
-        <p class="font-semibold">Jermaine</p>
+      <div v-else class="flex items-center space-x-4 mr-3">
+        <p class="text-sm">Welcome Back @{{ authStore.user.name }}</p>
+        <form @submit.prevent="authStore.logout">
+          <button class="p-1 font-bold text-sm" type="submit"> Logout -></button>
+        </form>
       </div>
     </div>
   </header>

@@ -1,12 +1,15 @@
 <script setup>
 import PostCard from '@/components/PostCard.vue';
+import { useAuthStore } from '@/stores/auth';
 let data = [1, 2, 3, 4, 5, 6]
 
+const authStore = useAuthStore()
 </script>
 
 <template>
-  <div class="flex justify-end">
-    <button class="btn-primary">
+  <div class="flex items-center justify-between mb-5">
+    <h2 class="text-4xl font-bold">Latest Posts</h2>
+    <button v-if="authStore.user" class="btn-primary">
       Add a Post
     </button>
   </div>

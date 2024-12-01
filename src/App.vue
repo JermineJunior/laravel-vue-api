@@ -1,6 +1,12 @@
 <script setup>
 import { RouterView } from 'vue-router';
 import BaseNavigation from '@/components/BaseNavigation.vue';
+import { useAuthStore } from './stores/auth';
+import { onMounted } from 'vue';
+
+const authStore = useAuthStore()
+
+onMounted(() => { authStore.getUser() })
 </script>
 <template>
     <div class="container m-6">
