@@ -1,6 +1,6 @@
 <script setup>
 import { useAuthStore } from '@/stores/auth';
-import { reactive } from 'vue';
+import { onMounted, reactive } from 'vue';
 import { storeToRefs } from 'pinia';
 import InputError from '@/components/InputError.vue';
 import { RouterLink } from 'vue-router';
@@ -11,6 +11,8 @@ const formData = reactive({
   email: "",
   password: "",
 });
+
+onMounted(() => (errors.value = {}));
 </script>
 
 <template>
