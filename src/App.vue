@@ -1,12 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router';
 import BaseNavigation from '@/components/BaseNavigation.vue';
-import { useAuthStore } from './stores/auth';
-import { onMounted } from 'vue';
 
-const authStore = useAuthStore()
-
-onMounted(() => { authStore.getUser() })
 </script>
 <template>
     <div class="container m-6">
@@ -20,7 +15,7 @@ onMounted(() => { authStore.getUser() })
 </template>
 <style scoped lang="postcss">
 :global(html) {
-    background-color: #09090b;
+    background-color: #121214;
     color: white;
 }
 </style>

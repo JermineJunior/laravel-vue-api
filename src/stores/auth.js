@@ -20,7 +20,7 @@ export const useAuthStore = defineStore('authStore', {
           this.user = data;
           this.errors = {};
         }
-        console.log(data);
+        // console.log(data);
       }
     },
     // register a new user

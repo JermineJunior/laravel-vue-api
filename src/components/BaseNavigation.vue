@@ -19,7 +19,8 @@ const authStore = useAuthStore()
     </div>
     <ul class="flex items-center justify-center space-x-6 list-none ">
       <li>
-        <RouterLink class="px-3 py-2 transition-all ease-in-out duration-300 hover:bg-zinc-800 rounded-md" to="/">Home</RouterLink>
+        <RouterLink class="px-3 py-2 transition-all ease-in-out duration-300 hover:bg-zinc-800 rounded-md" to="/">Home
+        </RouterLink>
       </li>
     </ul>
     <div class="">
@@ -33,9 +34,16 @@ const authStore = useAuthStore()
           Sign In</RouterLink>
       </div>
       <div v-else class="flex items-center space-x-4 mr-3">
-        <p class="text-sm">Welcome Back @{{ authStore.user.name }}</p>
+        <p class="text-sm">Welcome Back {{ authStore.user.name }}</p>
         <form @submit.prevent="authStore.logout">
-          <button class="p-1 font-bold text-sm" type="submit"> Logout -></button>
+          <button class="p-2 flex items-center font-bold text-sm border border-gray-500 rounded-md" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+            </svg>
+            <span class="ml-2">Logout</span>
+          </button>
         </form>
       </div>
     </div>
